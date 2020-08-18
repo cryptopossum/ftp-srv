@@ -42,6 +42,9 @@ class FtpCommands {
       flags: params.flags,
       raw: message,
     };
+    console.log("parsed command strippedMessage=", strippedMessage);
+    console.log("parsed command message=", message);
+    console.log("parsed command command=", command);
     return command;
   }
 
