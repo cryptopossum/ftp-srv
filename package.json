@@ -1,6 +1,6 @@
 {
-  "name": "ftp-srv",
-  "version": "0.0.0",
+  "name": "@dominiek/ftp-srv",
+  "version": "0.0.1",
   "description": "Modern, extensible FTP Server",
   "keywords": [
     "ftp",
@@ -22,7 +22,7 @@
   "types": "./ftp-srv.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/autovance/ftp-srv"
+    "url": "https://github.com/dominiek/ftp-srv"
   },
   "scripts": {
     "pre-release": "npm run verify",
