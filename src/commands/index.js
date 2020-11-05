@@ -22,8 +22,7 @@ class FtpCommands {
   }
 
   parse(message) {
-    const strippedMessage = message.replace(/"/g, "").replace(/\x0a\x20/g, " ");
-    let [directive, ...args] = strippedMessage.split(" ");
+    let [directive, ...args] = message.split(" ");
     directive = _.chain(directive).trim().toUpper().value();
 
     const parseCommandFlags = !["RETR", "SIZE", "STOR"].includes(directive);
@@ -42,9 +41,6 @@ class FtpCommands {
       flags: params.flags,
       raw: message,
     };
-    console.log("parsed command strippedMessage=", strippedMessage);
-    console.log("parsed command message=", message);
-    console.log("parsed command command=", command);
     return command;
   }
 
